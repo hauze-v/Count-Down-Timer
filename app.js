@@ -28,7 +28,7 @@ function getRTime(start, target) {
   return {
     rDays: days,
     rHours: hours,
-    rMinutes: minutes
+    rMinutes: minutes,
     rSeconds: seconds
   }
 }
