@@ -36,11 +36,11 @@ function getRTime(start, target) {
 // Displays remaining time
 function displayRTime() {
   const startDate = new Date(); /* Define fresh start time */
-  let rTime = getRTime(startDate, targetDate); /* Get the remaining time */
+  let rTimeObj = getRTime(startDate, targetDate); /* Get the remaining time */
   
   /* Display the remaining time */
-  timerDayEl.innerHTML = rTime.rDays;
-  timerHourEl.innerHTML = rTime.rHours;
-  timerMinEl.innerHTML = rTime.rMinutes;
-  timerSecEl.innerHTML = rTime.rSeconds;
+  timerDayEl.textContent = rTimeObj.rDays;
+  timerHourEl.textContent = rTimeObj.rHours;
+  timerMinEl.textContent = rTimeObj.rMinutes;
+  timerSecEl.textContent = rTimeObj.rSeconds;
 }
