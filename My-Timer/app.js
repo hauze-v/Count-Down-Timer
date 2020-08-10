@@ -33,8 +33,27 @@ function displayTime() {
   const targetDate = new Date("September 11, 2020 00:00:00");
   let rTimeObj = getTimeDifference(startDate, targetDate);
   
-  timerDaysEl.textContent = rTimeObj.rDays;
-  timerHoursEl.textContent = rTimeObj.rHours;
-  timerMinsEl.textContent = rTimeObj.rMins;
-  timerSecsEl.textContent = rTimeObj.rSecs;
+  if (rTimeObj.rDays < 10) {
+    timerDaysEl.textContent = `0${rTimeObj.rDays}`
+  } else {
+    timerDaysEl.textContent = rTimeObj.rDays;
+  }
+
+  if (rTimeObj.rHours < 10) {
+    timerHoursEl.textContent = `0${rTimeObj.rHours}`
+  } else {
+    timerHoursEl.textContent = rTimeObj.rHours;
+  }
+
+  if (rTimeObj.rMins < 10) {
+    timeMinsDEl.textContent = `0${rTimeObj.rMins}`
+  } else {
+    timerMinsEl.textContent = rTimeObj.rMins;
+  }
+
+  if (rTimeObj.rSecs < 10) {
+    timerSecsEl.textContent = `0${rTimeObj.rSecs}`
+  } else {
+    timerSecsEl.textContent = rTimeObj.rSecs;
+  }
 }
